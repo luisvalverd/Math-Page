@@ -3,7 +3,7 @@ version: "3.9"
 services:
   # this service should use the web image after I build it
   web:
-    image: next-nginx
+    image: next-test
     ports:
       - "3000:80"
     environment:
