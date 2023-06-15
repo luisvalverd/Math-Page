@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "@/components/navbar";
+import NavbarPage from "@/components/navbar";
 import Mision from "@/components/mision";
 import Vision from "@/components/vision";
 import Footer from "@/components/footer";
@@ -19,7 +19,7 @@ export default function Home() {
         ></Image>
       </div>
       <div className="z-10">
-        <Navbar></Navbar>
+        <NavbarPage></NavbarPage>
         <div className="col-1 flex flex-col mt-36 px-24">
           <div className="flex justify-center items-center my-16">
             <Image
