@@ -15,8 +15,7 @@ export default function Home() {
           src="/background.jpg"
           className="z-2"
           alt="background"
-          width={1900}
-          height={800}
+          fill
         ></Image>
       </div>
       <div className="z-10">
