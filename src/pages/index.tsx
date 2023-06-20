@@ -9,21 +9,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen${inter.className}`}>
-      <div className="w-full h-full fixed top-0 left-0 right-0 z-0">
-        <Image
-          src="/background.jpg"
-          className="z-2"
-          alt="background"
-          fill
-        ></Image>
-      </div>
+    <main className={`flex min-h-screen${inter.className} bg-gray-100`}>
       <div className="z-10">
         <NavbarPage></NavbarPage>
         <div className="col-1 flex flex-col mt-36 px-24">
-          <div className="flex justify-center items-center my-16">
+          <div className="flex justify-center items-center mb-12">
             <Image
-              src="/club_de_matematicas.png"
+              src="/logo.png"
               className="rounded-xl z-0"
               alt="logo club de optimización matematica"
               width={500}

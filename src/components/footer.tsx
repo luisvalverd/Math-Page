@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="w-full px-64 py-24 h-auto bg-red-500">
+    <div className="w-full px-64 py-24 h-auto bg-gray-200">
       <div>
         <div className="mb-6">
-          <h3 className="font-bold text-2xl text-white border-b-2 block">
+          <h3 className="font-bold text-2xl text-black border-gray-400 border-b-2 block">
             Contacto
           </h3>
         </div>
-        <ul>
+        <ul className="text-black">
           <li className="py-1">
             <p className="text-sm">
               Club de Optimizcion Matematica Computacional

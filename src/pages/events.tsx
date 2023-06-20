@@ -10,7 +10,7 @@ export default function Events() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col bg-gray-100 items-center justify-between">
       <Navbar></Navbar>
       <h1>events</h1>
     </main>
