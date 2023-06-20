@@ -7,7 +7,7 @@ export default function About() {
 
   useEffect(() => {
     push("/comming_soon");
-  }, []);
+  });
 
   return (
     <main className="flex min-h-screen bg-gray-100 flex-col items-center justify-between">
