@@ -9,7 +9,7 @@ export default function CommingSoon() {
         <Navbar></Navbar>
         <div className="w-full bg-gray-100 h-full flex justify-center items-center">
           <p className="flex text-black justify-center items-center text-8xl font-bold">
-            Proximamente
+            Próximamente
           </p>
         </div>
         <Footer></Footer>

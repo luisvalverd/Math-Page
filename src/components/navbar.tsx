@@ -1,13 +1,27 @@
-/* eslint-disable @next/next/no-img-element */
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NavbarPage() {
+interface Props {
+  background?: string;
+  icon?: string;
+  icon_width?: number;
+  icon_height?: number;
+  text_icon_style?: string;
+}
+
+const NavbarPage: React.FC<Props> = (props: Props) => {
   return (
-    <nav className="bg-gray-200 md:w-full justify-between w-auto md:h-64 flex">
+    <nav className={`${props.background}`}>
       <div className="text-black flex justify-center items-center ml-24">
-        <Link href="/">
-          <Image src="/logo.png" alt="logo" width={400} height={300}></Image>
+        <Link href="/" className="flex justify-center">
+          <Image
+            src={`${props.icon}`}
+            alt="logo"
+            width={props.icon_width}
+            height={props.icon_height}
+          ></Image>
+          <span className={`${props.text_icon_style}`}>COMC UPEC</span>
         </Link>
       </div>
       <div className="text-black flex justify-center items-center mr-24">
@@ -22,7 +36,7 @@ export default function NavbarPage() {
           <li className="mx-4">
             <Link href="/about">
               <span className="font-medium hover:border-b-2 border-black">
-                Informacion
+                Información
               </span>
             </Link>
           </li>
@@ -44,4 +58,6 @@ export default function NavbarPage() {
       </div>
     </nav>
   );
-}
+};
+
+export default NavbarPage;

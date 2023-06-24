@@ -4,7 +4,7 @@ export default function Vision() {
       <div className="h-16 mb-6">
         <h3 className="font-extrabold text-4xl">
           <span className="before:block before:absolute before:-inset-4 before:-skew-y-3 before:bg-black relative inline-block ">
-            <span className="relative text-white">Vision</span>
+            <span className="relative text-white">Visión</span>
           </span>
         </h3>
       </div>
