@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface Props {
-  background?: string;
   icon?: string;
   icon_width?: number;
   icon_height?: number;
@@ -12,7 +11,10 @@ interface Props {
 
 const NavbarPage: React.FC<Props> = (props: Props) => {
   return (
-    <nav className={`${props.background}`}>
+    <nav
+      className="bg-gray-200 md:w-full justify-between w-auto md:h-64 flex fixed top-0 right-0 left-0 z-10"
+      id="navbar"
+    >
       <div className="text-black flex justify-center items-center ml-24">
         <Link href="/" className="flex justify-center">
           <Image

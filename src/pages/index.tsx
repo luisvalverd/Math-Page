@@ -6,14 +6,15 @@ import Footer from "@/components/footer";
 import { Inter } from "next/font/google";
 import { useEffect, useRef, useState } from "react";
 
+// animations
+import {
+  navbarAnimationEnd,
+  navbarAnimationStart,
+} from "@/assets/animations/navbar";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [navbarStyles, setNavbarStyles] = useState<any>(
-    `
-    bg-gray-200 md:w-full justify-between w-auto md:h-64 flex fixed top-0 right-0 left-0 z-10
-    `
-  );
   const [navbarIcon, setNavbarIcon] = useState("/logo_black.png");
   const [navbarIconWidth, setNavbarIconWidth] = useState(400);
   const [navbarIconHeight, setNavbarIconHeight] = useState(300);
@@ -24,38 +25,34 @@ export default function Home() {
 
   useEffect(() => {
     /**
-     * change styles of navbar when scroll page
+     * change of navbar when scroll page
+     * control icon then scroll is down in page
+     * control height and add a animation
      */
     const handleScroll = () => {
       const main: any = navbar_ref.current;
       let { y } = main.getBoundingClientRect();
-      let style_navbar: string;
       let icon: string;
       let width: number;
       let height: number;
       let icon_text_style: string;
 
       if (y < -10) {
-        style_navbar = `
-          bg-gray-200 md:w-full justify-between w-auto md:h-24 flex fixed top-0 right-0 left-0 z-10
-          `;
         icon = "/logo_small_black.png";
         width = 80;
         height = 50;
         icon_text_style =
           "flex justify-center items-center font-bold text-xl ml-8";
+        navbarAnimationStart();
       } else {
-        style_navbar = `
-          bg-gray-200 md:w-full justify-between w-auto md:h-64 flex fixed top-0 right-0 left-0 z-10
-          `;
         icon = "/logo_black.png";
         width = 400;
         height = 300;
         icon_text_style = "hidden";
+        navbarAnimationEnd();
       }
 
       setNavbarIcon(icon);
-      setNavbarStyles(style_navbar);
       setNavbarIconWidth(width);
       setNavbarIconHeight(height);
       setNavbarIconTextStyle(icon_text_style);
@@ -75,7 +72,6 @@ export default function Home() {
     >
       <div className="z-10 mt-36">
         <NavbarPage
-          background={navbarStyles}
           icon_height={navbarIconHeight}
           icon_width={navbarIconWidth}
           icon={navbarIcon}
